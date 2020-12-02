@@ -19,8 +19,9 @@ pipeline {
 	    }
 	    stage('Results') {
 	    	steps{
+	    		input ("Do you want to capture results?")
 	    		junit '**/target/surefire-reports/TEST-*.xml'
-	        	archiveArtifacts 'target/*.jar'
+	        	archiveArtifacts 'demo-git/target/*.jar'
 	    	}	        
 	    }
     }
