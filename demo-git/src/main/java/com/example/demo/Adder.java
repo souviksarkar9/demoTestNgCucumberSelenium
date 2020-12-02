@@ -12,5 +12,5 @@ class Adder{
 	public long add(Long []l1) {
 		return Arrays.asList(l1).stream().mapToLong(Long :: valueOf).sum();
 	}
-	
+	 
 }
